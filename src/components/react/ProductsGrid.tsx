@@ -67,7 +67,7 @@ export default function ProductsGrid() {
 
               {/* Hover View (Details) - Always visible on mobile, hover on desktop */}
               <div className="absolute inset-0 bg-black flex flex-col items-center justify-center p-6 md:translate-y-full md:group-hover:translate-y-0 transition-transform duration-500">
-                <span className="text-xs text-white/40 uppercase tracking-widest mb-2 border-b border-white/10 pb-1">{brand.origin}</span>
+                <span className="text-xs text-white/60 uppercase tracking-widest mb-2 border-b border-white/10 pb-1">{brand.origin}</span>
                 <h4 className="font-display font-bold text-xl uppercase mb-3 text-gold hidden md:block">{brand.name}</h4>
                 <h4 className="font-display font-bold text-xl uppercase mb-3 text-gold md:hidden">{brand.name}</h4>
                 <div className="space-y-1 mb-4">

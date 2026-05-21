@@ -96,7 +96,7 @@ export default function PortfolioMasonry() {
                 <span className="text-gold text-xs font-bold uppercase tracking-widest mb-2 block">{item.category}</span>
                 <h4 className="font-display font-bold text-xl uppercase text-white mb-1">{item.title}</h4>
                 <p className="text-white/60 text-sm mb-3 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 delay-100">{item.desc}</p>
-                <div className="flex items-center gap-2 text-xs text-white/40 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                <div className="flex items-center gap-2 text-xs text-white/60 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-300 delay-200">
                   <svg width="12" height="12" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="6" cy="6" r="5"/><path d="M6 3v3l2 2"/></svg>
                   {item.duration}
                 </div>

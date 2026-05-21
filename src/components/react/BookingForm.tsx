@@ -105,8 +105,8 @@ export default function BookingForm() {
           </div>
 
           <div className="mb-8">
-            <label className="block text-xs uppercase tracking-widest text-white/50 mb-2">Kondisi Cat Saat Ini</label>
-            <select required value={formData.condition} onChange={e => setFormData({...formData, condition: e.target.value})} className={`${inputClasses} appearance-none cursor-pointer`}>
+            <label htmlFor="condition" className="block text-xs uppercase tracking-widest text-white/50 mb-2">Kondisi Cat Saat Ini</label>
+            <select id="condition" required value={formData.condition} onChange={e => setFormData({...formData, condition: e.target.value})} className={`${inputClasses} appearance-none cursor-pointer`}>
               <option value="" disabled>Pilih kondisi...</option>
               <option value="Baru (Dari Dealer)">Baru (Dari Dealer)</option>
               <option value="Ada swirl/baret halus">Ada swirl / baret halus</option>

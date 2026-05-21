@@ -153,7 +153,7 @@ export default function CoatingTiers() {
             </div>
           ))}
         </div>
-        <p className="text-center text-white/40 text-xs mt-12 italic">* Harga bervariasi berdasarkan ukuran kendaraan (Hatchback / Sedan / SUV / MPV / Supercar).</p>
+        <p className="text-center text-white/60 text-xs mt-12 italic">* Harga bervariasi berdasarkan ukuran kendaraan (Hatchback / Sedan / SUV / MPV / Supercar).</p>
       </div>
     </section>
   );

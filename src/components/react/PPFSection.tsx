@@ -88,7 +88,7 @@ export default function PPFSection() {
                 <div key={i} className="ppf-row flex flex-col md:flex-row justify-between pb-4 border-b border-white/5 last:border-0 last:pb-0">
                   <div>
                     <div className="font-bold text-white text-sm uppercase tracking-wider">{zone.name}</div>
-                    <div className="text-white/40 text-xs mt-1">{zone.area}</div>
+                    <div className="text-white/60 text-xs mt-1">{zone.area}</div>
                   </div>
                   <div className="text-gold font-light text-sm mt-2 md:mt-0">{zone.price}</div>
                 </div>
