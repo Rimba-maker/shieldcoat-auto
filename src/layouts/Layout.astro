@@ -1,0 +1,38 @@
+---
+import '../styles/global.css';
+import Navbar from '../components/astro/Navbar.astro';
+import Footer from '../components/astro/Footer.astro';
+import CustomCursor from '../components/react/CustomCursor.tsx';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Spesialis ceramic coating, paint protection film (PPF), dan vehicle wrapping di Jakarta." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..800&family=Oswald:wght@200..700&family=Syncopate:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="bg-black text-white font-sans">
+    <CustomCursor client:load />
+    <Navbar />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

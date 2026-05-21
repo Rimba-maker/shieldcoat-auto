@@ -1,0 +1,64 @@
+---
+---
+<nav class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 bg-black/80 backdrop-blur-sm border-b border-white/10" id="navbar">
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="/" class="text-white font-display font-bold text-xl tracking-wider uppercase relative z-50">
+      ShieldCoat<span class="text-gold">.</span>
+    </a>
+    
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#services" class="text-sm font-medium text-white/80 hover:text-white transition-colors uppercase tracking-widest">Services</a>
+      <a href="#portfolio" class="text-sm font-medium text-white/80 hover:text-white transition-colors uppercase tracking-widest">Portfolio</a>
+      <a href="#workshop" class="text-sm font-medium text-white/80 hover:text-white transition-colors uppercase tracking-widest">Workshop</a>
+      <a href="#book" class="px-6 py-3 bg-gold text-black font-bold uppercase tracking-widest text-sm rounded-none hover:bg-white transition-colors">
+        Book Consultation
+      </a>
+    </div>
+
+    <!-- Mobile Toggle -->
+    <button id="mobile-menu-btn" class="md:hidden text-white p-3 -mr-3 relative z-50 focus:outline-none" aria-label="Toggle Menu">
+      <svg id="icon-menu" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" class="block"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg id="icon-close" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter" class="hidden"><path d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 bg-black z-40 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col items-center justify-center gap-8 pt-20">
+      <a href="#services" class="mobile-link text-xl md:text-2xl font-display font-bold text-white uppercase tracking-widest">Services</a>
+      <a href="#portfolio" class="mobile-link text-xl md:text-2xl font-display font-bold text-white uppercase tracking-widest">Portfolio</a>
+      <a href="#workshop" class="mobile-link text-xl md:text-2xl font-display font-bold text-white uppercase tracking-widest">Workshop</a>
+      <a href="#book" class="mobile-link px-8 py-4 mt-4 bg-gold text-black font-bold uppercase tracking-widest text-sm rounded-none">
+        Book Consultation
+      </a>
+  </div>
+</nav>
+
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const iconMenu = document.getElementById('icon-menu');
+  const iconClose = document.getElementById('icon-close');
+  const links = document.querySelectorAll('.mobile-link');
+  let isOpen = false;
+
+  const toggleMenu = () => {
+    isOpen = !isOpen;
+    if (isOpen) {
+      menu?.classList.remove('translate-x-full');
+      iconMenu?.classList.add('hidden');
+      iconClose?.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    } else {
+      menu?.classList.add('translate-x-full');
+      iconMenu?.classList.remove('hidden');
+      iconClose?.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+  };
+
+  btn?.addEventListener('click', toggleMenu);
+  links.forEach(link => link.addEventListener('click', () => {
+    if (isOpen) toggleMenu();
+  }));
+</script>

@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/react/Hero.tsx';
+import CoreServices from '../components/react/CoreServices.tsx';
+import CoatingTiers from '../components/react/CoatingTiers.tsx';
+import PPFSection from '../components/react/PPFSection.tsx';
+import Wrapping from '../components/react/Wrapping.tsx';
+import ProcessTimeline from '../components/react/ProcessTimeline.tsx';
+import ProductsGrid from '../components/react/ProductsGrid.tsx';
+import PortfolioMasonry from '../components/react/PortfolioMasonry.tsx';
+import Applicators from '../components/react/Applicators.tsx';
+import WorkshopGallery from '../components/react/WorkshopGallery.tsx';
+import FAQ from '../components/react/FAQ.tsx';
+import BookingForm from '../components/react/BookingForm.tsx';
+---
+
+<Layout title="ShieldCoat Auto Protection | Premium Ceramic Coating & PPF">
+  <Hero client:load />
+  <CoreServices client:visible />
+  <CoatingTiers client:visible />
+  <PPFSection client:visible />
+  <Wrapping client:visible />
+  <ProcessTimeline client:visible />
+  <ProductsGrid client:visible />
+  <PortfolioMasonry client:visible />
+  <Applicators client:visible />
+  <WorkshopGallery client:visible />
+  <FAQ client:visible />
+  <BookingForm client:idle />
+</Layout>
