@@ -88,10 +88,10 @@ export default function ProcessTimeline() {
                 </div>
 
                 {/* Content */}
-                <div className="w-full md:w-1/2 pl-20 md:pl-0 md:px-12 flex flex-col justify-center">
-                  <div className={`p-8 bg-black border border-white/5 hover:border-gold/50 transition-colors duration-300 group ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
-                    <div className={`text-3xl mb-4 transition-all ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>{step.icon}</div>
-                    <h4 className="font-display font-bold text-xl uppercase mb-3 text-white">
+                <div className="w-full md:w-1/2 pl-16 md:pl-0 md:px-12 flex flex-col justify-center">
+                  <div className={`p-5 md:p-8 bg-black border border-white/5 hover:border-gold/50 transition-colors duration-300 group ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                    <div className={`text-3xl mb-3 md:mb-4 transition-all ${index % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>{step.icon}</div>
+                    <h4 className="font-display font-bold text-lg md:text-xl uppercase mb-2 md:mb-3 text-white break-words">
                       {step.title}
                     </h4>
                     <p className="text-white/60 text-sm leading-relaxed">
